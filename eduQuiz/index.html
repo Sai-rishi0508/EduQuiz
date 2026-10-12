@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Quiz App</title>
+  <link rel="icon" href="https://img.icons8.com/color/48/000000/internet.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sign Up Screen -->
+  <div id="signup-screen" class="screen active">
+    <h1>🧠 Advanced Quiz App</h1>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="login()">Start Quiz</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard-screen" class="screen hidden">
+    <h2>Welcome, <span id="user-display"></span>!</h2>
+    <h3>Select Subject:</h3>
+    <select id="subject-select">
+      <option value="science">Science</option>
+      <option value="maths">Mathematics</option>
+      <option value="history">History</option>
+    </select>
+    <h3>Select Difficulty:</h3>
+    <select id="difficulty-select">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button onclick="startQuiz()">Start Quiz</button>
+    <button onclick="viewUserScores()">View Scores</button>
+  </div>
+
+  <!-- Scoreboard -->
+  <div id="scoreboard-screen" class="screen hidden">
+    <h2>Your Score History</h2>
+    <ul id="scoreboard-list"></ul>
+    <button onclick="goToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen hidden">
+    <div id="question-number">Question 1 of 10</div>
+    <div id="question">Loading question...</div>
+    <ul id="choices"></ul>
+    <div id="explanation" class="hidden"></div>
+    <div id="timer">Time Left: <span id="time">10</span>s</div>
+    <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen hidden">
+    <h2>Quiz Completed!</h2>
+    <p>Your score: <span id="score"></span>/10</p>
+    <button onclick="restartQuiz()">Try Again</button>
+    <button onclick="goToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.Title (Novel & Unique):
+
+EduQuiz – Smart Skill Assessment and Leaderboard Tracker
+A responsive, interactive web-based quiz platform with real-time scoring and leaderboard management using front-end technologies only.
+
+.Problem Definition:
+
+In today’s digital learning era, students often lack tools to self-assess their knowledge in a structured, real-time, and engaging manner. Traditional assessments are static and lack customization based on subject or difficulty. Additionally, there's no simple way for individuals to track and compare their performance with others. This creates a need for a smart, interactive quiz platform that delivers immediate feedback and encourages improvement through leaderboard-driven motivation.
+.
+Existing Work:
+
+Several online quiz applications like Kahoot, Quizizz, and Google Forms provide quiz-taking features. However, many of these are either backend-heavy, require registration/logins, or are not tailored for small-scale educational projects or portfolio-level showcases. They also may not offer fine control over local leaderboard tracking or difficulty-based question selection for front-end learners. Existing solutions are often cloud-dependent or commercial in nature.
+Objective & Scope:
+
+.Objectives:
+
+    Develop a fully front-end-based quiz platform.
+
+    Allow users to select subjects (e.g., Math, Science, English, GK).
+
+    Support difficulty levels: Easy, Medium, and Hard.
+
+    Provide instant feedback on answers.
+
+    Display a local leaderboard per subject/difficulty using localStorage.
+
+.Scope:
+
+    User-friendly interface with dark/light mode toggle.
+
+    Fully responsive design compatible across devices.
+
+    Stores and displays the latest 10 quiz attempts.
+
+    Supports question randomization to avoid repetition.
+
+    All functionality is achieved using HTML, CSS, and JavaScript — no backend required.
+
+.Clarity & Presentation:
+
+    The project offers a clean and modern interface with smooth UI transitions.
+
+    Clear structure: subject/difficulty selection, question presentation, and leaderboard.
+
+    Dark mode provides an accessible and pleasant experience for all users.
+
+    Animated progress bar and color-coded feedback (green/red) enhance user interaction.
+
+    Each section of the app is self-contained, well-commented, and easy to maintain or expand.
+
+    Leaderboard dynamically renders for each quiz category to support competitive learning.

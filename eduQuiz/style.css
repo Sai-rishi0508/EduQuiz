@@ -1,0 +1,183 @@
+:root {
+  --main-bg: #0f2027;
+  --accent: #2c5364;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text: #fff;
+  --btn: #00c6ff;
+  --btn-hover: #0072ff;
+  --success: #28a745;
+  --error: #dc3545;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, var(--main-bg), var(--accent));
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.screen {
+  width: 90%;
+  max-width: 500px;
+  background: var(--card-bg);
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.5s ease-in-out;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+select option {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+button {
+  background: var(--btn);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+#choices li button {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 5px solid transparent;
+  border-radius: 6px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#choices li button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid var(--btn);
+}
+
+#choices li button.correct {
+  background: var(--success);
+  border-left: 5px solid #1d8330;
+  color: white;
+  font-weight: 600;
+}
+
+#choices li button.incorrect {
+  background: var(--error);
+  border-left: 5px solid #ab2c2c;
+  color: white;
+  font-weight: 600;
+}
+
+#timer {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  animation: pulse 1s infinite;
+}
+
+#explanation {
+  font-style: italic;
+  margin-top: 10px;
+  color: #ccc;
+  text-align: center;
+}
+
+#next-btn {
+  margin-top: 20px;
+}
+
+#scoreboard-list {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@media (max-width: 600px) {
+  .screen {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
